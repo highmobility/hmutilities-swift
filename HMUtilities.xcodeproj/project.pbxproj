@@ -11,6 +11,7 @@
 		203C3A88205ABE4B00D68330 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */; };
 		203C3A8A205ABF1900D68330 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A89205ABF1900D68330 /* Float+Extensions.swift */; };
 		203C3A8E205AC79600D68330 /* FixedWidthInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */; };
+		203C3A96205ACA4F00D68330 /* SignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */; };
 		20580B3E205AB02D000E9ED3 /* UInt8Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */; };
 		OBJ_27 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* HMUtilitiesTests.swift */; };
 		OBJ_29 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
@@ -31,6 +32,7 @@
 		203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		203C3A89205ABF1900D68330 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
 		203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Extensions.swift"; sourceTree = "<group>"; };
+		203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8Collection+Extensions.swift"; sourceTree = "<group>"; };
 		"HMUtilities::HMUtilities::Product" /* HMUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HMUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */,
 				203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */,
 				203C3A89205ABF1900D68330 /* Float+Extensions.swift */,
+				203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */,
 				203C3A5F205AB58900D68330 /* String+Extensions.swift */,
 				20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */,
 			);
@@ -196,6 +199,7 @@
 			files = (
 				203C3A60205AB58900D68330 /* String+Extensions.swift in Sources */,
 				20580B3E205AB02D000E9ED3 /* UInt8Collection+Extensions.swift in Sources */,
+				203C3A96205ACA4F00D68330 /* SignedInteger+Extensions.swift in Sources */,
 				203C3A8E205AC79600D68330 /* FixedWidthInteger+Extensions.swift in Sources */,
 				203C3A8A205ABF1900D68330 /* Float+Extensions.swift in Sources */,
 				203C3A88205ABE4B00D68330 /* Bool+Extensions.swift in Sources */,
