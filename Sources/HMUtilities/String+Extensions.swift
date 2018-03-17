@@ -10,6 +10,7 @@ import Foundation
 
 public extension String {
 
+    // Bytes from an *hex* string
     var bytes: [UInt8] {
         return characterPairs.flatMap { UInt8($0, radix: 16) }
     }
