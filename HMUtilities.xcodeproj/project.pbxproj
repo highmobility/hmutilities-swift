@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		203C3A60205AB58900D68330 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A5F205AB58900D68330 /* String+Extensions.swift */; };
-		203C3A88205ABE4B00D68330 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */; };
-		203C3A8A205ABF1900D68330 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A89205ABF1900D68330 /* Float+Extensions.swift */; };
-		203C3A8E205AC79600D68330 /* FixedWidthInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */; };
-		203C3A96205ACA4F00D68330 /* SignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */; };
-		20580B3E205AB02D000E9ED3 /* UInt8Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */; };
-		OBJ_27 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* HMUtilitiesTests.swift */; };
-		OBJ_29 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
+		OBJ_34 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMUtilitiesTests.swift */; };
+		OBJ_36 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
+		OBJ_43 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Bool+Extensions.swift */; };
+		OBJ_44 /* FixedWidthInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* FixedWidthInteger+Extensions.swift */; };
+		OBJ_45 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Float+Extensions.swift */; };
+		OBJ_46 /* SignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SignedInteger+Extensions.swift */; };
+		OBJ_47 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* String+Extensions.swift */; };
+		OBJ_48 /* UInt8Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* UInt8Collection+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		20580B3B205AAF99000E9ED3 /* PBXContainerItemProxy */ = {
+		206ED7D6206108C200D7761E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -28,28 +28,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		203C3A5F205AB58900D68330 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
-		203C3A89205ABF1900D68330 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
-		203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Extensions.swift"; sourceTree = "<group>"; };
-		203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
-		20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8Collection+Extensions.swift"; sourceTree = "<group>"; };
 		"HMUtilities::HMUtilities::Product" /* HMUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HMUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* HMUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMUtilitiesTests.swift; sourceTree = "<group>"; };
+		"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = HMUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* FixedWidthInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_11 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_12 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_14 /* UInt8Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8Collection+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_17 /* HMUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMUtilitiesTests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_28 /* Frameworks */ = {
+		OBJ_35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_29 /* HMUtilities.framework in Frameworks */,
+				OBJ_36 /* HMUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_37 /* Frameworks */ = {
+		OBJ_49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -59,24 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* Tests */ = {
+		OBJ_15 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* HMUtilitiesTests */,
+				OBJ_16 /* HMUtilitiesTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* HMUtilitiesTests */ = {
+		OBJ_16 /* HMUtilitiesTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* HMUtilitiesTests.swift */,
+				OBJ_17 /* HMUtilitiesTests.swift */,
 			);
 			name = HMUtilitiesTests;
 			path = Tests/HMUtilitiesTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_13 /* Products */ = {
+		OBJ_20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */,
@@ -85,14 +86,16 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
-				OBJ_13 /* Products */,
+				OBJ_15 /* Tests */,
+				OBJ_19 /* Scripts */,
+				OBJ_20 /* Products */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -106,12 +109,12 @@
 		OBJ_8 /* HMUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				203C3A87205ABE4B00D68330 /* Bool+Extensions.swift */,
-				203C3A8D205AC79600D68330 /* FixedWidthInteger+Extensions.swift */,
-				203C3A89205ABF1900D68330 /* Float+Extensions.swift */,
-				203C3A95205ACA4F00D68330 /* SignedInteger+Extensions.swift */,
-				203C3A5F205AB58900D68330 /* String+Extensions.swift */,
-				20580B3D205AB02D000E9ED3 /* UInt8Collection+Extensions.swift */,
+				OBJ_9 /* Bool+Extensions.swift */,
+				OBJ_10 /* FixedWidthInteger+Extensions.swift */,
+				OBJ_11 /* Float+Extensions.swift */,
+				OBJ_12 /* SignedInteger+Extensions.swift */,
+				OBJ_13 /* String+Extensions.swift */,
+				OBJ_14 /* UInt8Collection+Extensions.swift */,
 			);
 			name = HMUtilities;
 			path = Sources/HMUtilities;
@@ -122,10 +125,10 @@
 /* Begin PBXNativeTarget section */
 		"HMUtilities::HMUtilities" /* HMUtilities */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "HMUtilities" */;
+			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "HMUtilities" */;
 			buildPhases = (
-				OBJ_35 /* Sources */,
-				OBJ_37 /* Frameworks */,
+				OBJ_42 /* Sources */,
+				OBJ_49 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,15 +141,15 @@
 		};
 		"HMUtilities::HMUtilitiesTests" /* HMUtilitiesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "HMUtilitiesTests" */;
+			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "HMUtilitiesTests" */;
 			buildPhases = (
-				OBJ_26 /* Sources */,
-				OBJ_28 /* Frameworks */,
+				OBJ_33 /* Sources */,
+				OBJ_35 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_30 /* PBXTargetDependency */,
+				OBJ_37 /* PBXTargetDependency */,
 			);
 			name = HMUtilitiesTests;
 			productName = HMUtilitiesTests;
@@ -160,11 +163,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
-				TargetAttributes = {
-					"HMUtilities::HMUtilities" = {
-						LastSwiftMigration = 0920;
-					};
-				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HMUtilities" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -173,8 +171,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_13 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -185,76 +183,38 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_26 /* Sources */ = {
+		OBJ_33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_27 /* HMUtilitiesTests.swift in Sources */,
+				OBJ_34 /* HMUtilitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_35 /* Sources */ = {
+		OBJ_42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				203C3A60205AB58900D68330 /* String+Extensions.swift in Sources */,
-				20580B3E205AB02D000E9ED3 /* UInt8Collection+Extensions.swift in Sources */,
-				203C3A96205ACA4F00D68330 /* SignedInteger+Extensions.swift in Sources */,
-				203C3A8E205AC79600D68330 /* FixedWidthInteger+Extensions.swift in Sources */,
-				203C3A8A205ABF1900D68330 /* Float+Extensions.swift in Sources */,
-				203C3A88205ABE4B00D68330 /* Bool+Extensions.swift in Sources */,
+				OBJ_43 /* Bool+Extensions.swift in Sources */,
+				OBJ_44 /* FixedWidthInteger+Extensions.swift in Sources */,
+				OBJ_45 /* Float+Extensions.swift in Sources */,
+				OBJ_46 /* SignedInteger+Extensions.swift in Sources */,
+				OBJ_47 /* String+Extensions.swift in Sources */,
+				OBJ_48 /* UInt8Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_30 /* PBXTargetDependency */ = {
+		OBJ_37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "HMUtilities::HMUtilities" /* HMUtilities */;
-			targetProxy = 20580B3B205AAF99000E9ED3 /* PBXContainerItemProxy */;
+			targetProxy = 206ED7D6206108C200D7761E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilitiesTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HMUtilitiesTests;
-			};
-			name = Debug;
-		};
-		OBJ_25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilitiesTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HMUtilitiesTests;
-			};
-			name = Release;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -262,9 +222,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DXcode";
@@ -273,56 +235,45 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
-		OBJ_33 /* Debug */ = {
+		OBJ_31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilities_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilitiesTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HMUtilities;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HMUtilities;
+				TARGET_NAME = HMUtilitiesTests;
 			};
 			name = Debug;
 		};
-		OBJ_34 /* Release */ = {
+		OBJ_32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilities_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilitiesTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HMUtilities;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HMUtilities;
+				TARGET_NAME = HMUtilitiesTests;
 			};
 			name = Release;
 		};
@@ -333,8 +284,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,7 +295,51 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilities_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HMUtilities;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HMUtilities;
+			};
+			name = Debug;
+		};
+		OBJ_41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HMUtilities.xcodeproj/HMUtilities_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HMUtilities;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HMUtilities;
 			};
 			name = Release;
 		};
@@ -358,20 +355,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_23 /* Build configuration list for PBXNativeTarget "HMUtilitiesTests" */ = {
+		OBJ_30 /* Build configuration list for PBXNativeTarget "HMUtilitiesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_24 /* Debug */,
-				OBJ_25 /* Release */,
+				OBJ_31 /* Debug */,
+				OBJ_32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_32 /* Build configuration list for PBXNativeTarget "HMUtilities" */ = {
+		OBJ_39 /* Build configuration list for PBXNativeTarget "HMUtilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_33 /* Debug */,
-				OBJ_34 /* Release */,
+				OBJ_40 /* Debug */,
+				OBJ_41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
