@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		206ED7D820610B4900D7761E /* HMUtilities iOS Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 206ED7D920610B4900D7761E /* Build configuration list for PBXAggregateTarget "HMUtilities iOS Universal" */;
+			buildPhases = (
+				206ED7DC20610B7100D7761E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "HMUtilities iOS Universal";
+			productName = "HMUtilities iOS Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		OBJ_34 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMUtilitiesTests.swift */; };
 		OBJ_36 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
@@ -163,6 +177,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					206ED7D820610B4900D7761E = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = F42CFRE556;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HMUtilities" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -178,9 +199,26 @@
 			targets = (
 				"HMUtilities::HMUtilitiesTests" /* HMUtilitiesTests */,
 				"HMUtilities::HMUtilities" /* HMUtilities */,
+				206ED7D820610B4900D7761E /* HMUtilities iOS Universal */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		206ED7DC20610B7100D7761E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"${SRCROOT}/Scripts/UniversalBuildScript.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_33 /* Sources */ = {
@@ -215,6 +253,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		206ED7DA20610B4900D7761E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F42CFRE556;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			};
+			name = Debug;
+		};
+		206ED7DB20610B4900D7761E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F42CFRE556;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -346,6 +406,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		206ED7D920610B4900D7761E /* Build configuration list for PBXAggregateTarget "HMUtilities iOS Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206ED7DA20610B4900D7761E /* Debug */,
+				206ED7DB20610B4900D7761E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "HMUtilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
