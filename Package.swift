@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "HMUtilities",
     products: [
-        .library(name: "HMUtilities", targets: ["HMUtilities"]),
+        .library(name: "HMUtilities", type: .dynamic, targets: ["HMUtilities"]),
     ],
     targets: [
         .target(name: "HMUtilities", dependencies: []),
