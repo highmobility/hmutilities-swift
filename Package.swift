@@ -7,6 +7,7 @@ let package = Package(
     name: "HMUtilities",
     products: [
         .library(name: "HMUtilities", type: .dynamic, targets: ["HMUtilities"]),
+        .library(name: "HMUtilities", type: .static, targets: ["HMUtilities"]),
     ],
     targets: [
         .target(name: "HMUtilities", dependencies: []),
