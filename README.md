@@ -2,6 +2,8 @@
 
 **HMUtilities** source code in *Swift*, that can be made into a *framework* by `swift build` (*macOS* and *Linux* only), or through *Xcode*. Using the latter allows additionally to build for *iOS*, *tvOS* or *watchOS*.  
 
+In addition, if using this as a *dependency* with Swift Package Manager, the suitable architecture is handled by Xcode.
+
 ## Framework Usage ##
 
 For *iOS*, it's recommended to build the *universal* framework - thus enabling running on a simulator as well.  
