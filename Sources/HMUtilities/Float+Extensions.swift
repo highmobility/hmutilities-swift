@@ -30,6 +30,7 @@ import Foundation
 
 public extension Float {
 
+    /// The bit pattern of the float, using the *IEE 754* standard.
     var bytes: [UInt8] {
         return bitPattern.bytes
     }

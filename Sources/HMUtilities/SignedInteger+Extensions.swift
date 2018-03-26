@@ -30,6 +30,7 @@ import Foundation
 
 public extension SignedInteger {
 
+    /// The "lowest" byte of the value.
     var uint8: UInt8 {
         return UInt8(truncatingIfNeeded: self)
     }

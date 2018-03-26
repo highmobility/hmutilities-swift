@@ -30,6 +30,9 @@ import Foundation
 
 public extension Bool {
 
+    /// A single byte value representing the Bool.
+    ///
+    /// Returns *0x01* for *true*, and *0x00* for *false*.
     var byte: UInt8 {
         return self ? 0x01 : 0x00
     }

@@ -30,6 +30,9 @@ import Foundation
 
 public extension FixedWidthInteger {
 
+    /// Converts the value to the number of bytes used to represent the value.
+    ///
+    /// *E.g.* UInt32 would return 4 bytes, Int64 would return 8 bytes.
     var bytes: [UInt8] {
         return Swift.stride(from: 0, to: bitWidth, by: 8).reversed().map { UInt8((self >> $0) & 0xFF) }
     }
