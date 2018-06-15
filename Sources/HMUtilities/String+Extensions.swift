@@ -39,9 +39,7 @@ public extension String {
 extension String {
 
     var characterPairs: [String] {
-        let startEmptyStringPairsArray: [String] = []
-
-        return enumerated().reduce(startEmptyStringPairsArray) { (midResult, enumerationTuple) in
+        return replacingOccurrences(of: " ", with: "").enumerated().reduce([String]()) { (midResult, enumerationTuple) in
             var result = midResult
 
             if (enumerationTuple.offset % 2) == 1 {
