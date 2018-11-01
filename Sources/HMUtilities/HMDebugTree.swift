@@ -1,5 +1,5 @@
 //
-//  DebugTree.swift
+//  HMDebugTree.swift
 //  HMUtilities
 //
 //  Created by Mikk Rätsep on 10/05/2018.
@@ -8,10 +8,10 @@
 import Foundation
 
 
-public enum DebugTree {
+public enum HMDebugTree {
 
     case leaf(label: String)
-    case node(label: String, nodes: [DebugTree])
+    case node(label: String, nodes: [HMDebugTree])
 
 
     // MARK: Vars
@@ -40,7 +40,7 @@ public enum DebugTree {
 
     // MARK: Init
 
-    public init(_ anything: Any, label: String? = nil, expandProperties: Bool = false, customValue: ((Any, String, Bool) -> DebugTree?)? = nil) {
+    public init(_ anything: Any, label: String? = nil, expandProperties: Bool = false, customValue: ((Any, String, Bool) -> HMDebugTree?)? = nil) {
         let mirror = Mirror(reflecting: anything)
         let label = label ?? "\(type(of: anything))"
 
@@ -54,7 +54,7 @@ public enum DebugTree {
                     self = .leaf(label: label + " = " + array.hex)
                 }
                 else if let array = anything as? Array<Any> {
-                    self = .node(label: label, nodes: array.map { DebugTree($0, expandProperties: expandProperties, customValue: customValue) })
+                    self = .node(label: label, nodes: array.map { HMDebugTree($0, expandProperties: expandProperties, customValue: customValue) })
                 }
                 else {
                     self = .leaf(label: label)
@@ -65,7 +65,7 @@ public enum DebugTree {
 
             case .optional:
                 if let value = mirror.children.first?.value {
-                    self = DebugTree(value, label: label, expandProperties: expandProperties, customValue: customValue)
+                    self = HMDebugTree(value, label: label, expandProperties: expandProperties, customValue: customValue)
                 }
                 else {
                     self = .leaf(label: label + " = nil")
@@ -78,18 +78,18 @@ public enum DebugTree {
                 }
                 else {
                     // Pass the iVar label onward
-                    let nodes = mirror.children.map { DebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
+                    let nodes = mirror.children.map { HMDebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
 
                     self = .node(label: label, nodes: nodes)
                 }
 
             case .tuple:
-                let nodes = mirror.children.map { DebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
+                let nodes = mirror.children.map { HMDebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
 
                 self = .node(label: label, nodes: nodes)
 
             case .class:
-                let nodes = mirror.children.map { DebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
+                let nodes = mirror.children.map { HMDebugTree($0.value, label: $0.label, expandProperties: expandProperties, customValue: customValue) }
 
                 self = .node(label: label, nodes: nodes)
 
@@ -104,7 +104,7 @@ public enum DebugTree {
     }
 }
 
-private extension DebugTree {
+private extension HMDebugTree {
 
     func stringValue(_ prefix: String) -> String {
         switch self {
