@@ -1,6 +1,6 @@
 //
 // HMUtilities
-// Copyright (C) 2018 High-Mobility GmbH
+// Copyright (C) 2019 High-Mobility GmbH
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -23,17 +23,37 @@
 //  HMUtilities
 //
 //  Created by Mikk Rätsep on 15/03/2018.
+//  Copyright © 2019 High Mobility GmbH. All rights reserved.
 //
 
 import Foundation
 
 
-public extension Bool {
+extension Bool: HMBytesConvertable {
 
     /// A single byte value representing the Bool.
     ///
-    /// Returns *0x01* for *true*, and *0x00* for *false*.
-    var byte: UInt8 {
+    /// Returns `0x01` for `true`, and `0x00` for `false`.
+    public var byte: UInt8 {
         return self ? 0x01 : 0x00
+    }
+
+
+    // MARK: HMBytesConvertable
+
+    /// A single byte array representing the Bool.
+    ///
+    /// Returns `[0x01]` for `true`, and `[0x00]` for `false`.
+    public var bytes: [UInt8] {
+        return [self ? 0x01 : 0x00]
+    }
+
+
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 1 else {
+            return nil
+        }
+
+        self = bytes[0] == 0x01
     }
 }

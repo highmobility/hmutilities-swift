@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (C) 2018 High-Mobility GmbH
+# Copyright (C) 2019 High-Mobility GmbH
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@
 #  AppStoreCompatible.sh
 #
 #  Created by Mikk Rätsep on 07/03/2017.
+#  Copyright © 2019 High Mobility GmbH. All rights reserved.
 #
 
 

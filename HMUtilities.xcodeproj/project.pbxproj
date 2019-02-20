@@ -21,12 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2067973820A43599003734D0 /* HMDebugTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067973720A43599003734D0 /* HMDebugTree.swift */; };
+		2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */; };
 		20896EF22147E0E4003A7A63 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20896EF12147E0E4003A7A63 /* Double+Extensions.swift */; };
 		OBJ_34 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMUtilitiesTests.swift */; };
 		OBJ_36 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
 		OBJ_43 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Bool+Extensions.swift */; };
-		OBJ_44 /* FixedWidthInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* FixedWidthInteger+Extensions.swift */; };
 		OBJ_45 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Float+Extensions.swift */; };
 		OBJ_46 /* SignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SignedInteger+Extensions.swift */; };
 		OBJ_47 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* String+Extensions.swift */; };
@@ -44,11 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2067973720A43599003734D0 /* HMDebugTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDebugTree.swift; sourceTree = "<group>"; };
+		2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMBytesConvertable.swift; sourceTree = "<group>"; };
 		20896EF12147E0E4003A7A63 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		"HMUtilities::HMUtilities::Product" /* HMUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HMUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* FixedWidthInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -127,9 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Bool+Extensions.swift */,
-				2067973720A43599003734D0 /* HMDebugTree.swift */,
+				2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */,
 				20896EF12147E0E4003A7A63 /* Double+Extensions.swift */,
-				OBJ_10 /* FixedWidthInteger+Extensions.swift */,
 				OBJ_11 /* Float+Extensions.swift */,
 				OBJ_12 /* SignedInteger+Extensions.swift */,
 				OBJ_13 /* String+Extensions.swift */,
@@ -243,10 +240,9 @@
 			files = (
 				20896EF22147E0E4003A7A63 /* Double+Extensions.swift in Sources */,
 				OBJ_43 /* Bool+Extensions.swift in Sources */,
-				OBJ_44 /* FixedWidthInteger+Extensions.swift in Sources */,
+				2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */,
 				OBJ_45 /* Float+Extensions.swift in Sources */,
 				OBJ_46 /* SignedInteger+Extensions.swift in Sources */,
-				2067973820A43599003734D0 /* HMDebugTree.swift in Sources */,
 				OBJ_47 /* String+Extensions.swift in Sources */,
 				OBJ_48 /* UInt8Collection+Extensions.swift in Sources */,
 			);

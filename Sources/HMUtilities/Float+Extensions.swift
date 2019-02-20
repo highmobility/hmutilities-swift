@@ -1,6 +1,6 @@
 //
 // HMUtilities
-// Copyright (C) 2018 High-Mobility GmbH
+// Copyright (C) 2019 High-Mobility GmbH
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -23,15 +23,29 @@
 //  HMUtilities
 //
 //  Created by Mikk Rätsep on 15/03/2018.
+//  Copyright © 2019 High Mobility GmbH. All rights reserved.
 //
 
 import Foundation
 
 
-public extension Float {
+extension Float: HMBytesConvertable {
 
     /// The bit pattern of the float, using the *IEE 754* standard.
-    var bytes: [UInt8] {
+    public var bytes: [UInt8] {
         return bitPattern.bytes
+    }
+
+
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 4 else {
+            return nil
+        }
+
+        guard let uint32 = UInt32(bytes: bytes) else {
+            return nil
+        }
+
+        self = Float(bitPattern: uint32)
     }
 }

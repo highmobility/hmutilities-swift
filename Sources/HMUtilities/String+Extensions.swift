@@ -1,6 +1,6 @@
 //
 // HMUtilities
-// Copyright (C) 2018 High-Mobility GmbH
+// Copyright (C) 2019 High-Mobility GmbH
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@
 //  HMCryptoKitCLT
 //
 //  Created by Mikk Rätsep on 07/03/2018.
+//  Copyright © 2019 High Mobility GmbH. All rights reserved.
 //
 
 import Foundation
@@ -31,7 +32,7 @@ import Foundation
 public extension String {
 
     // Bytes from an *hex* string
-    var bytes: [UInt8] {
+    var hexBytes: [UInt8] {
         return characterPairs.compactMap { UInt8($0, radix: 16) }
     }
 }
