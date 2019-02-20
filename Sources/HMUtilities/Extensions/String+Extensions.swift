@@ -37,10 +37,24 @@ public extension String {
     }
 }
 
+extension String: HMBytesConvertable {
+
+    public var bytes: [UInt8] {
+        return data(using: .utf8)?.bytes ?? []
+    }
+
+
+    public init?(bytes: [UInt8]) {
+        self.init(data: bytes.data, encoding: .utf8)
+    }
+}
+
 extension String {
 
     var characterPairs: [String] {
-        return replacingOccurrences(of: " ", with: "").enumerated().reduce([String]()) { (midResult, enumerationTuple) in
+        let cleanString = replacingOccurrences(of: "0x", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: " ", with: "")
+
+        return cleanString.enumerated().reduce([String]()) { (midResult, enumerationTuple) in
             var result = midResult
 
             if (enumerationTuple.offset % 2) == 1 {

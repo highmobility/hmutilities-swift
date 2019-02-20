@@ -89,7 +89,7 @@ extension HMBytesConvertable where Self: RawRepresentable, Self.RawValue == UInt
 }
 
 
-// Just helps...
+// Signed ints
 extension Int: HMBytesConvertable {
 
 }
@@ -110,6 +110,8 @@ extension Int64: HMBytesConvertable {
 
 }
 
+
+// Unsigned ints
 extension UInt: HMBytesConvertable {
 
 }
