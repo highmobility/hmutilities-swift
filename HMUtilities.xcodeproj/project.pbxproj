@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		200AE468221DA2BB00F41B0A /* HMDebugTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AE467221DA2BB00F41B0A /* HMDebugTree.swift */; };
 		2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */; };
 		2070E2AE221D839E0050CE86 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2AD221D839E0050CE86 /* Date+Extensions.swift */; };
 		2070E2B0221D842B0050CE86 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2AF221D842B0050CE86 /* URL+Extensions.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200AE467221DA2BB00F41B0A /* HMDebugTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDebugTree.swift; sourceTree = "<group>"; };
 		2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMBytesConvertable.swift; sourceTree = "<group>"; };
 		2070E2AD221D839E0050CE86 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2070E2AF221D842B0050CE86 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */,
+				200AE467221DA2BB00F41B0A /* HMDebugTree.swift */,
 				2070E2B1221D844A0050CE86 /* Extensions */,
 			);
 			name = HMUtilities;
@@ -258,6 +261,7 @@
 				2070E2AE221D839E0050CE86 /* Date+Extensions.swift in Sources */,
 				OBJ_43 /* Bool+Extensions.swift in Sources */,
 				2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */,
+				200AE468221DA2BB00F41B0A /* HMDebugTree.swift in Sources */,
 				2070E2B0221D842B0050CE86 /* URL+Extensions.swift in Sources */,
 				OBJ_45 /* Float+Extensions.swift in Sources */,
 				OBJ_46 /* SignedInteger+Extensions.swift in Sources */,
