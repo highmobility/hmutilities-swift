@@ -96,18 +96,58 @@ extension Int: HMBytesConvertable {
 
 extension Int8: HMBytesConvertable {
 
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 1 else {
+            return nil
+        }
+
+        self = Int8(bitPattern: bytes[0])
+    }
 }
 
 extension Int16: HMBytesConvertable {
 
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 2  else {
+            return nil
+        }
+
+        guard let uint16 = UInt16(bytes: bytes) else {
+            return nil
+        }
+
+        self = Int16(bitPattern: uint16)
+    }
 }
 
 extension Int32: HMBytesConvertable {
 
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 4  else {
+            return nil
+        }
+
+        guard let uint32 = UInt32(bytes: bytes) else {
+            return nil
+        }
+
+        self = Int32(bitPattern: uint32)
+    }
 }
 
 extension Int64: HMBytesConvertable {
 
+    public init?(bytes: [UInt8]) {
+        guard bytes.count == 8  else {
+            return nil
+        }
+
+        guard let uint64 = UInt64(bytes: bytes) else {
+            return nil
+        }
+
+        self = Int64(bitPattern: uint64)
+    }
 }
 
 
