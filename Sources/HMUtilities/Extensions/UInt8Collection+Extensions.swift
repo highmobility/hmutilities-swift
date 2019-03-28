@@ -38,7 +38,7 @@ public extension Collection where Element == UInt8 {
 
     /// Date accessor.
     var data: Data {
-        return Data(bytes: bytes)
+        return Data(bytes)
     }
 
     /// The combined *hex* string representation of the values in the collection.

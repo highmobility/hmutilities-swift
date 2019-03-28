@@ -196,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HM;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "High Mobility GmbH";
 				TargetAttributes = {
 					206ED7D820610B4900D7761E = {
@@ -204,17 +204,21 @@
 						DevelopmentTeam = F42CFRE556;
 						ProvisioningStyle = Automatic;
 					};
+					"HMUtilities::HMUtilities" = {
+						LastSwiftMigration = 1020;
+					};
 					"HMUtilities::HMUtilitiesTests" = {
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HMUtilities" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_20 /* Products */;
@@ -308,6 +312,7 @@
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -370,7 +375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HMUtilitiesTests;
 			};
 			name = Debug;
@@ -388,7 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HMUtilitiesTests;
 			};
 			name = Release;
@@ -396,6 +401,7 @@
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -458,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.high-mobility.hmutilities";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HMUtilities;
 			};
 			name = Debug;
@@ -479,7 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.high-mobility.hmutilities";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HMUtilities;
 			};
 			name = Release;
