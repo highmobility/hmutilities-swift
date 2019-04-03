@@ -96,6 +96,11 @@ extension Int: HMBytesConvertable {
 
 extension Int8: HMBytesConvertable {
 
+    public var bytes: [UInt8] {
+        return [UInt8(bitPattern: self)]
+    }
+
+
     public init?(bytes: [UInt8]) {
         guard bytes.count == 1 else {
             return nil
