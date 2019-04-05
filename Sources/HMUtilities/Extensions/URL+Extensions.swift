@@ -32,12 +32,12 @@ import Foundation
 extension URL: HMBytesConvertable {
 
     public var bytes: [UInt8] {
-        return absoluteString.data(using: .utf8)?.bytes ?? []
+        return absoluteString.bytes
     }
 
 
     public init?(bytes: [UInt8]) {
-        guard let string = String(bytes: bytes, encoding: .utf8) else {
+        guard let string = String(bytes: bytes) else {
             return nil
         }
 

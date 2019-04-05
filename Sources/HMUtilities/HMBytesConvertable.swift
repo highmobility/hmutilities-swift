@@ -40,6 +40,7 @@ public protocol HMBytesConvertable {
 extension HMBytesConvertable {
 
     public init?<C>(bytes: C?) where C: Collection, C.Element == UInt8 {
+        // Casting the generic-bytes to concrete-bytes avoids a recursive cycle
         guard let bytes = bytes?.bytes else {
             return nil
         }
@@ -61,10 +62,14 @@ extension HMBytesConvertable where Self: FixedWidthInteger {
     ///
     /// *E.g.* `UInt32` would be initialised with *4 bytes*, `UInt64` with *8 bytes*, etc...
     public init?(bytes: [UInt8]) {
-        let bytesCount = Self(1).bitWidth / 8   // Workaround for self.bitWidth
-        let prefixedBytes = bytes.prefix(bytesCount)
+        // Workaround for self.bitWidth
+        let bytesCount = Self(1).bitWidth / 8
 
-        self = prefixedBytes.reduce(Self(0)) { ($0 << 8) + Self($1) }
+        guard bytes.count == bytesCount else {
+            return nil
+        }
+
+        self = bytes.prefix(bytesCount).reduce(Self(0)) { ($0 << 8) + Self($1) }
     }
 }
 
@@ -76,12 +81,9 @@ extension HMBytesConvertable where Self: RawRepresentable, Self.RawValue == UInt
 
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 1 else {
-            return nil
-        }
-
-        guard let value = Self(rawValue: bytes[0]) else {
-            return nil
+        guard let uint8 = UInt8(bytes: bytes),
+            let value = Self(rawValue: uint8) else {
+                return nil
         }
 
         self = value
@@ -92,6 +94,12 @@ extension HMBytesConvertable where Self: RawRepresentable, Self.RawValue == UInt
 // Signed ints
 extension Int: HMBytesConvertable {
 
+    public init?(bytes: [UInt8]) {
+        let bytesCount = Int(1).bitWidth / 8   // Workaround for self.bitWidth
+        let prefixedBytes = bytes.prefix(bytesCount)
+
+        self = prefixedBytes.reduce(Int(0)) { ($0 << 8) + Int($1) }
+    }
 }
 
 extension Int8: HMBytesConvertable {
@@ -102,21 +110,17 @@ extension Int8: HMBytesConvertable {
 
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 1 else {
+        guard let uint8 = UInt8(bytes: bytes) else {
             return nil
         }
 
-        self = Int8(bitPattern: bytes[0])
+        self = Int8(bitPattern: uint8)
     }
 }
 
 extension Int16: HMBytesConvertable {
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 2  else {
-            return nil
-        }
-
         guard let uint16 = UInt16(bytes: bytes) else {
             return nil
         }
@@ -128,10 +132,6 @@ extension Int16: HMBytesConvertable {
 extension Int32: HMBytesConvertable {
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 4  else {
-            return nil
-        }
-
         guard let uint32 = UInt32(bytes: bytes) else {
             return nil
         }
@@ -143,10 +143,6 @@ extension Int32: HMBytesConvertable {
 extension Int64: HMBytesConvertable {
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 8  else {
-            return nil
-        }
-
         guard let uint64 = UInt64(bytes: bytes) else {
             return nil
         }

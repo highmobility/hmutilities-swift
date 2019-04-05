@@ -22,11 +22,12 @@
 
 /* Begin PBXBuildFile section */
 		200AE468221DA2BB00F41B0A /* HMDebugTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AE467221DA2BB00F41B0A /* HMDebugTree.swift */; };
+		20319CA022575FB50075A6E9 /* HMBytesConvertableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20319C9F22575FB50075A6E9 /* HMBytesConvertableTests.swift */; };
 		2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */; };
 		2070E2AE221D839E0050CE86 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2AD221D839E0050CE86 /* Date+Extensions.swift */; };
 		2070E2B0221D842B0050CE86 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2AF221D842B0050CE86 /* URL+Extensions.swift */; };
 		20896EF22147E0E4003A7A63 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20896EF12147E0E4003A7A63 /* Double+Extensions.swift */; };
-		OBJ_34 /* HMUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMUtilitiesTests.swift */; };
+		OBJ_34 /* HMExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMExtensionsTests.swift */; };
 		OBJ_36 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMUtilities::HMUtilities::Product" /* HMUtilities.framework */; };
 		OBJ_43 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Bool+Extensions.swift */; };
 		OBJ_45 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Float+Extensions.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		200AE467221DA2BB00F41B0A /* HMDebugTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDebugTree.swift; sourceTree = "<group>"; };
+		20319C9F22575FB50075A6E9 /* HMBytesConvertableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBytesConvertableTests.swift; sourceTree = "<group>"; };
 		2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMBytesConvertable.swift; sourceTree = "<group>"; };
 		2070E2AD221D839E0050CE86 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2070E2AF221D842B0050CE86 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		OBJ_12 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_14 /* UInt8Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8Collection+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_17 /* HMUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMUtilitiesTests.swift; sourceTree = "<group>"; };
+		OBJ_17 /* HMExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_19 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
@@ -108,7 +110,8 @@
 		OBJ_16 /* HMUtilitiesTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* HMUtilitiesTests.swift */,
+				20319C9F22575FB50075A6E9 /* HMBytesConvertableTests.swift */,
+				OBJ_17 /* HMExtensionsTests.swift */,
 			);
 			name = HMUtilitiesTests;
 			path = Tests/HMUtilitiesTests;
@@ -253,7 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_34 /* HMUtilitiesTests.swift in Sources */,
+				20319CA022575FB50075A6E9 /* HMBytesConvertableTests.swift in Sources */,
+				OBJ_34 /* HMExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

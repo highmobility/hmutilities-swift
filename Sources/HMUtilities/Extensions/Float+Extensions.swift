@@ -38,12 +38,9 @@ extension Float: HMBytesConvertable {
 
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 4 else {
-            return nil
-        }
-
-        guard let uint32 = UInt32(bytes: bytes) else {
-            return nil
+        guard bytes.count == 4,
+            let uint32 = UInt32(bytes: bytes) else {
+                return nil
         }
 
         self = Float(bitPattern: uint32)

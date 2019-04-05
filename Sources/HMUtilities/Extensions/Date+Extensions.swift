@@ -37,12 +37,9 @@ extension Date: HMBytesConvertable {
 
 
     public init?(bytes: [UInt8]) {
-        guard bytes.count == 8 else {
-            return nil
-        }
-
-        guard let uint64 = UInt64(bytes: bytes) else {
-            return nil
+        guard bytes.count == 8,
+            let uint64 = UInt64(bytes: bytes) else {
+                return nil
         }
 
         self.init(timeIntervalSince1970: TimeInterval(uint64) / 1e3)
