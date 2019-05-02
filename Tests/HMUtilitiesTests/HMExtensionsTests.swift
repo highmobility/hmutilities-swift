@@ -33,12 +33,12 @@ import XCTest
 class HMExtensionsTests: XCTestCase {
 
     static var allTests = [("testBool", testBool),
+                           ("testCollection", testCollection),
                            ("testDate", testDate),
                            ("testDouble", testDouble),
                            ("testFloat", testFloat),
                            ("testSignedInteger", testSignedInteger),
                            ("testString", testString),
-                           ("testUInt8Collection", testUInt8Collection),
                            ("testURL", testURL)]
 
 
@@ -57,6 +57,15 @@ class HMExtensionsTests: XCTestCase {
         XCTAssertEqual(Bool(bytes: [0x01]), true)
         XCTAssertEqual(Bool(bytes: [0x00]), false)
         XCTAssertNil(Bool(bytes: [0x01, 0x00]))
+    }
+
+    func testCollection() {
+        // Hex
+        XCTAssertEqual([UInt8]([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).hex, "00010203040F")
+        XCTAssertEqual(Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).hex, "00010203040F")
+
+        // Compact Map Concurrently
+        XCTAssertEqual([0xAA, 0xBB, 0x44, 0x77].compactMapConcurrently { String(format: "%02X", $0) }, ["AA", "BB", "44", "77"])
     }
 
     func testDate() {
@@ -106,20 +115,6 @@ class HMExtensionsTests: XCTestCase {
         // Character Pairs
         XCTAssertEqual("001122AABBCC".characterPairs, ["00", "11", "22", "AA", "BB", "CC"])
         XCTAssertEqual("0x00, 0x11, 0x22, 0xAA, 0xBB, 0xCC, 0xD".characterPairs, ["00", "11", "22", "AA", "BB", "CC", "D"])
-    }
-
-    func testUInt8Collection() {
-        // Bytes
-        XCTAssertEqual([UInt8]([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).bytes, [0x00, 0x01, 0x02, 0x03, 0x04, 0x0F])
-        XCTAssertEqual(Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).bytes, [0x00, 0x01, 0x02, 0x03, 0x04, 0x0F])
-
-        // Data
-        XCTAssertEqual([UInt8]([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).data, Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]))
-        XCTAssertEqual(Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).data, Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]))
-
-        // Hex
-        XCTAssertEqual([UInt8]([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).hex, "00010203040F")
-        XCTAssertEqual(Data([0x00, 0x01, 0x02, 0x03, 0x04, 0x0F]).hex, "00010203040F")
     }
 
     func testURL() {

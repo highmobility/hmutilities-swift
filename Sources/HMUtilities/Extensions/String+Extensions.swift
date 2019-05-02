@@ -40,12 +40,16 @@ public extension String {
 extension String: HMBytesConvertable {
 
     public var bytes: [UInt8] {
-        return data(using: .utf8)?.bytes ?? []
+        guard let data = data(using: .utf8) else {
+            return []
+        }
+
+        return Array(data)
     }
 
 
     public init?(bytes: [UInt8]) {
-        self.init(data: bytes.data, encoding: .utf8)
+        self.init(data: Data(bytes), encoding: .utf8)
     }
 }
 

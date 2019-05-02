@@ -31,18 +31,28 @@ import Foundation
 
 public extension Collection where Element == UInt8 {
 
-    /// The simple Array(self) accessor.
-    var bytes: [UInt8] {
-        return Array(self)
-    }
-
-    /// Date accessor.
-    var data: Data {
-        return Data(bytes)
-    }
-
     /// The combined *hex* string representation of the values in the collection.
     var hex: String {
         return map { String(format: "%02X", $0) }.joined()
+    }
+}
+
+public extension Collection where Index == Int {
+
+    func compactMapConcurrently<ElementOfResult>(_ transform: (Element) -> ElementOfResult?) -> [ElementOfResult] {
+        let lock = NSLock()
+        var results: [ElementOfResult] = []
+
+        DispatchQueue.concurrentPerform(iterations: count) {
+            guard let elementOfResult = transform(self[$0]) else {
+                return
+            }
+
+            lock.lockUnlock {
+                results.append(elementOfResult)
+            }
+        }
+
+        return results
     }
 }

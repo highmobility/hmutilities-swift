@@ -37,7 +37,6 @@ public enum HMDebugTree {
 
     // MARK: Vars
 
-    #if PRODUCTION
     public var label: String {
         switch self {
         case .leaf(label: let label):
@@ -124,10 +123,8 @@ public enum HMDebugTree {
             self = .leaf(label: "\(label) = \(anything)")
         }
     }
-    #endif
 }
 
-#if PRODUCTION
 private extension HMDebugTree {
 
     func stringValue(_ prefix: String) -> String {
@@ -154,4 +151,3 @@ private extension HMDebugTree {
         }
     }
 }
-#endif

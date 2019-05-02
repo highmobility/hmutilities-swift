@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		200AE468221DA2BB00F41B0A /* HMDebugTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AE467221DA2BB00F41B0A /* HMDebugTree.swift */; };
+		20251711227365070065177C /* NSLock+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20251710227365070065177C /* NSLock+Extensions.swift */; };
 		20319CA022575FB50075A6E9 /* HMBytesConvertableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20319C9F22575FB50075A6E9 /* HMBytesConvertableTests.swift */; };
 		2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */; };
 		2070E2AE221D839E0050CE86 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E2AD221D839E0050CE86 /* Date+Extensions.swift */; };
@@ -33,7 +34,7 @@
 		OBJ_45 /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Float+Extensions.swift */; };
 		OBJ_46 /* SignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SignedInteger+Extensions.swift */; };
 		OBJ_47 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* String+Extensions.swift */; };
-		OBJ_48 /* UInt8Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* UInt8Collection+Extensions.swift */; };
+		OBJ_48 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Collection+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		200AE467221DA2BB00F41B0A /* HMDebugTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDebugTree.swift; sourceTree = "<group>"; };
+		20251710227365070065177C /* NSLock+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLock+Extensions.swift"; sourceTree = "<group>"; };
 		20319C9F22575FB50075A6E9 /* HMBytesConvertableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBytesConvertableTests.swift; sourceTree = "<group>"; };
 		2070E2A3221D7F6E0050CE86 /* HMBytesConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMBytesConvertable.swift; sourceTree = "<group>"; };
 		2070E2AD221D839E0050CE86 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -58,9 +60,9 @@
 		OBJ_11 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* SignedInteger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_14 /* UInt8Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8Collection+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_14 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_17 /* HMExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMExtensionsTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = SOURCE_ROOT; };
+		OBJ_19 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,12 +90,13 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Bool+Extensions.swift */,
+				OBJ_14 /* Collection+Extensions.swift */,
 				2070E2AD221D839E0050CE86 /* Date+Extensions.swift */,
 				20896EF12147E0E4003A7A63 /* Double+Extensions.swift */,
 				OBJ_11 /* Float+Extensions.swift */,
+				20251710227365070065177C /* NSLock+Extensions.swift */,
 				OBJ_12 /* SignedInteger+Extensions.swift */,
 				OBJ_13 /* String+Extensions.swift */,
-				OBJ_14 /* UInt8Collection+Extensions.swift */,
 				2070E2AF221D842B0050CE86 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
@@ -269,12 +272,13 @@
 				2070E2AE221D839E0050CE86 /* Date+Extensions.swift in Sources */,
 				OBJ_43 /* Bool+Extensions.swift in Sources */,
 				2070E2A4221D7F6E0050CE86 /* HMBytesConvertable.swift in Sources */,
+				20251711227365070065177C /* NSLock+Extensions.swift in Sources */,
 				200AE468221DA2BB00F41B0A /* HMDebugTree.swift in Sources */,
 				2070E2B0221D842B0050CE86 /* URL+Extensions.swift in Sources */,
 				OBJ_45 /* Float+Extensions.swift in Sources */,
 				OBJ_46 /* SignedInteger+Extensions.swift in Sources */,
 				OBJ_47 /* String+Extensions.swift in Sources */,
-				OBJ_48 /* UInt8Collection+Extensions.swift in Sources */,
+				OBJ_48 /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

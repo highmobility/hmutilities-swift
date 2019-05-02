@@ -41,7 +41,9 @@ class HMBytesConvertableTests: XCTestCase {
 
     func testProtocolExtension() {
         XCTAssertNotNil(Int(bytes: Optional<[UInt8]>([0x00, 0x11])))
+        XCTAssertNotNil(Int(bytes: ([0x00, 0x11, 0x22].prefix(2))))
         XCTAssertNil(Int(bytes: Optional<[UInt8]>.none))
+        XCTAssertNil(Int(bytes: Optional<ArraySlice<UInt8>>.none))
     }
 
     func testIntegers() {

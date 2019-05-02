@@ -39,13 +39,20 @@ public protocol HMBytesConvertable {
 
 extension HMBytesConvertable {
 
-    public init?<C>(bytes: C?) where C: Collection, C.Element == UInt8 {
-        // Casting the generic-bytes to concrete-bytes avoids a recursive cycle
-        guard let bytes = bytes?.bytes else {
+    public init?(bytes: Array<UInt8>?) {
+        guard let bytes = bytes else {
             return nil
         }
 
         self.init(bytes: bytes)
+    }
+
+    public init?(bytes: ArraySlice<UInt8>?) {
+        guard let bytes = bytes else {
+            return nil
+        }
+
+        self.init(bytes: Array(bytes))
     }
 }
 
