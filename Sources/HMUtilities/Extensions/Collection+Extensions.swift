@@ -31,6 +31,22 @@ import Foundation
 
 public extension Collection where Element == UInt8 {
 
+    var bytes: [UInt8] {
+        guard let array = self as? [UInt8] else {
+            return Array(self)
+        }
+
+        return array
+    }
+
+    var data: Data {
+        guard let data = self as? Data else {
+            return Data(self)
+        }
+
+        return data
+    }
+
     /// The combined *hex* string representation of the values in the collection.
     var hex: String {
         return map { String(format: "%02X", $0) }.joined()
