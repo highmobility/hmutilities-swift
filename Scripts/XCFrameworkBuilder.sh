@@ -19,7 +19,7 @@
 # Please inquire about commercial licensing options at
 # licensing@high-mobility.com
 #
-#  UniversalBuildScript.sh
+#  XCodeFrameworkBuilder.sh
 #
 #  Created by Mikk Rätsep on 12/09/2019.
 #  Copyright © 2019 High-Mobility. All rights reserved.
@@ -33,7 +33,8 @@ if [ -z "${SRCROOT}" ]; then
     SRCROOT="$( cd "$(dirname "$0")" ; pwd -P )/.."
 fi
 
-NAME="HMUtilities"
+
+NAME=$(ls -1d *.xcodeproj | tail -n 1 | cut -f1 -d ".")
 
 BUILD_DIR="${SRCROOT}/build"
 BUILD_DIR_iphoneos="${BUILD_DIR}/iphoneos"
@@ -62,7 +63,7 @@ xcodebuild archive \
     -sdk iphoneos \
     SKIP_INSTALL=NO \
     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-    -quiet
+#    -quiet
 
 # Archive for simulator
 echo "Archiving simulator..."
@@ -74,7 +75,7 @@ xcodebuild archive \
     -sdk iphonesimulator \
     SKIP_INSTALL=NO \
     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-    -quiet
+#    -quiet
 
 # Build xcframework with two archives
 echo "Creating XCFramework..."
@@ -84,24 +85,32 @@ xcodebuild -create-xcframework \
     -output ${XCFRAMEWORK_OUTPUT}
 
 
-
 ######################
-# "Fix" the CFBundleVersion being missing
-######################
-#
-#FWRK_VER=$(defaults read ${FRAMEWORK}/Info.plist CFBundleShortVersionString)
-#defaults write "${FRAMEWORK}/Info.plist" CFBundleVersion "${FWRK_VER}"
-
-
-
-######################
-# Cleanup
+# Move the product
 ######################
 
 # Copy the Universal to the root dir
 echo "Copying XCFramework..."
 rm -rf "${FINAL_OUTPUT}"
 cp -f -R "${XCFRAMEWORK_OUTPUT}" "${FINAL_OUTPUT}"
+
+
+######################
+# "Fix" the CFBundleVersion being missing
+######################
+
+echo "Updating .plists..."
+for PLIST in $(ls -d "${FINAL_OUTPUT}"/*/"${NAME}".framework/Info.plist)
+do
+    VERSION=$(/usr/libexec/PlistBuddy -c "print :CFBundleShortVersionString" $PLIST)
+
+    (/usr/libexec/PlistBuddy -c "add :CFBundleVersion string ${VERSION}" $PLIST)
+done
+
+
+######################
+# Cleanup
+######################
 
 # Removes the "build/" folder from the source folder
 echo "Removing build directory..."

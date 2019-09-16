@@ -41,6 +41,7 @@
 		2070E2AD221D839E0050CE86 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2070E2AF221D842B0050CE86 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		20896EF12147E0E4003A7A63 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		209A0B66232FC6D6001C4DA9 /* XCFrameworkBuilder.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFrameworkBuilder.sh; sourceTree = "<group>"; };
 		"HMUtilities::HMUtilities::Product" /* HMUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"HMUtilities::HMUtilitiesTests::Product" /* HMUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HMUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		OBJ_13 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_14 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_17 /* HMExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMExtensionsTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +88,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		209A0B65232FC6D6001C4DA9 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				209A0B66232FC6D6001C4DA9 /* XCFrameworkBuilder.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		OBJ_15 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				209A0B65232FC6D6001C4DA9 /* Scripts */,
 				OBJ_7 /* Sources */,
 				OBJ_15 /* Tests */,
-				OBJ_19 /* Scripts */,
 				OBJ_20 /* Products */,
 			);
 			sourceTree = "<group>";
