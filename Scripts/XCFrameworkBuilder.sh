@@ -61,6 +61,7 @@ xcodebuild archive \
     -archivePath "${BUILD_DIR_iphoneos}/${NAME}.xcarchive" \
     -derivedDataPath "${BUILD_DIR_iphoneos}/Derived Data" \
     -sdk iphoneos \
+    -destination "generic/platform=iOS" \
     SKIP_INSTALL=NO \
     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
 #    -quiet
@@ -73,6 +74,7 @@ xcodebuild archive \
     -archivePath "${BUILD_DIR_iphonesimulator}/${NAME}.xcarchive" \
     -derivedDataPath "${BUILD_DIR_iphonesimulator}/Derived Data" \
     -sdk iphonesimulator \
+    -destination "generic/platform=iOS Simulator"
     SKIP_INSTALL=NO \
     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
 #    -quiet
