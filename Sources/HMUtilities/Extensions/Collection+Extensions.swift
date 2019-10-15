@@ -49,7 +49,7 @@ public extension Collection where Element == UInt8 {
 
     /// The combined *hex* string representation of the values in the collection.
     var hex: String {
-        return map { String(format: "%02X", $0) }.joined()
+        return map { String(format: "%02x", $0) }.joined()
     }
 }
 
