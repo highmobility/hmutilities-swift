@@ -4,6 +4,7 @@
 
 *.framework
 *.dSYM
+*.swiftpm
 
 ## Build generated
 build/

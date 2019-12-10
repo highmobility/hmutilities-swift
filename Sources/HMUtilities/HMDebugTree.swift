@@ -39,10 +39,10 @@ public enum HMDebugTree {
 
     public var label: String {
         switch self {
-        case .leaf(label: let label):
+        case .leaf(let label):
             return label
 
-        case .node(label: let label, nodes: _):
+        case .node(let label, nodes: _):
             return label
         }
     }
