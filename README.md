@@ -1,14 +1,49 @@
-## What is in this repository ##
+# HMUtilities Swift SDK
 
-**HMUtilities** source code in *Swift*, that can be made into a *framework* by `swift build` (*macOS* and *Linux* only), or through *Xcode*. Using the latter allows additionally to build for *iOS*, *tvOS* or *watchOS*.  
+The HMUtilities hosts a set of extensions, and other functionality, commonly used in other High Mobility's *Swift* libraries.
 
-In addition, if using this as a *dependency* with Swift Package Manager, the suitable architecture is handled by Xcode.
+Table of contents
+=================
+<!--ts-->
+   * [Features](#features)
+   * [Integration](#integration)
+   * [Requirements](#requirements)
+   * [Contributing](#contributing)
+   * [Licence](#licence)
+<!--te-->
 
-## Framework Usage ##
 
-For *iOS*, it's recommended to build the *universal* framework - thus enabling running on a simulator as well.  
-There's an `AppStoreCompatible.sh` script for thinning the framework before submission to iTC.  
+## Features
 
-For *macOS* and *Linux*, executing `swift build` and using the product is recommended (use the `--show-bin-path` option to get the output path).  
+**Binary Serialization**: Converting *types* conforming to `HMBytesConvertable` to *bytes* and back. Out of the box support for basic Swift types like `String`, `Int`, `Double`, `URL` and more.
 
-For *other Apple* platforms, the *universal* framework can be made with `lipo` from *Xcode*'s simulator and device products. When creating a *universal* one, the *module maps* need to be copied as well.  
+**Hex**: Converting between hex strings and bytes.
+
+
+## Integration
+
+It's **recommended** to use the library through *Swift Package Manager* (SPM), which is now also built-in to Xcode and accessible in `File > Swift Packages > ...` or  going to project settings and selecting `Swift Packages` in the top-center.  
+When targeting a Swift package, the `Package.swift` file must include `.package(url: "https://github.com/highmobility/hmutilities-swift", .upToNextMinor(from: "[__version__]")),` under *dependencies*.
+  
+
+If SPM is not possible, the source can be downloaded directly from Github
+and built into an `.xcframework` using an accompaning script: [XCFrameworkBuilder.sh](https://github.com/highmobility/hmutilities-swift/tree/master/Scripts/XCFrameworkBuilder.sh). The created package includes both the simulator and device binaries, which must then be dropped (linked) to the target Xcode project.
+
+Furthermore, when `.xcframework` is also not suitable, the library can be made into a *fat binary* (`.framework`) by running [UniversalBuildScript.sh](https://github.com/highmobility/hmutilities-swift/tree/master/Scripts/UniversalBuildScript.sh). This combines both simulator and device slices into one binary, but requires the simulator slice to be removed *before* being able to upload to *App Store Connect* – for this there is a [AppStoreCompatible.sh](https://github.com/highmobility/hmutilities-swift/tree/master/Scripts/AppStoreCompatible.sh) script included inside the created `.framework` folder.
+
+
+## Requirements
+
+HMUtilities Swift SDK requires Xcode 11.0 or later and is compatible with apps targeting iOS 10.0 or above.
+
+
+## Contributing
+
+We would love to accept your patches and contributions to this project. Before getting to work, please first discuss the changes that you wish to make with us via [GitHub Issues](https://github.com/highmobility/hmutilities-swift/issues), [Spectrum](https://spectrum.chat/high-mobility/) or [Slack](https://slack.high-mobility.com/).
+
+See more in [CONTRIBUTING.md](https://github.com/highmobility/hmutilities-swift/tree/master/CONTRIBUTING.md)
+
+
+## Licence
+
+This repository is using MIT licence. See more in [LICENCE](https://github.com/highmobility/hmutilities-swift/tree/master/LICENCE)
