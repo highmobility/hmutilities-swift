@@ -46,4 +46,4 @@ See more in [CONTRIBUTING.md](https://github.com/highmobility/hmutilities-swift/
 
 ## Licence
 
-This repository is using MIT licence. See more in [LICENCE](https://github.com/highmobility/hmutilities-swift/tree/master/LICENCE)
+This repository is using MIT licence. See more in [LICENCE](https://github.com/highmobility/hmutilities-swift/tree/master/LICENSE)
